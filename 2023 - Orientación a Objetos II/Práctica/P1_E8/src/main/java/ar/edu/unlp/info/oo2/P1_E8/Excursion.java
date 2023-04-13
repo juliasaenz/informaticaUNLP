@@ -69,4 +69,38 @@ public class Excursion {
 	public String getPuntoEncuentro() {
 		return this.puntoEncuentro;
 	}
+	
+	/* borrar */ 
+	
+	public void ordenarArreglo(Array<Character> arreglo, int cont) {
+		boolean ordenado = true;
+		char aux;
+		while(!ordenado) {
+			for(int i = 1; i < cont; i++) {
+				if( Character.compare(arreglo[i], arreglo[i+1]) > 0 ) {
+					aux = arreglo[i];
+					arreglo[i] = arreglo[i+1];
+					arreglo[i+1] = aux;
+					ordenado = false;
+				}
+			}
+		}
+	}
+	
+	/*Procedure ordenar_arreglo(var arreglo: arreglo_de_caracteres;cont:integer);
+	var
+	i:integer; ordenado:boolean;
+	aux:char;
+	begin
+	repeat
+	ordenado:=true;
+	for i:=1 to cont-1 do
+	if ord(arreglo[i])>ord(arreglo[i+1])
+	then begin
+	aux:=arreglo[i];
+	arreglo[i]:=arreglo[i+1];
+	arreglo[i+1]:=aux; ordenado:=false
+	end;
+	until ordenado;
+	end;*/
 }
