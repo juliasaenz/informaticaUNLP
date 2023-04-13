@@ -20,17 +20,19 @@ public class Directorio extends Elemento{
 	
 	public Archivo archivoMasGrande() {
 
-		Archivo a = (Archivo) elementos.stream()
+		Archivo a =  elementos.stream()
+					.map( el -> el.archivoMasGrande() )
 					.max( (el1, el2) -> Integer.compare(
-								el1.archivoMasGrande().tamanioTotalOcupado(), 
-								el2.archivoMasGrande().tamanioTotalOcupado()) )
+								el1.tamanioTotalOcupado(), 
+								el2.tamanioTotalOcupado()) )
 					.orElse(null);
 	
 		return a;
 	}
 
 	public Archivo archivoMasNuevo() {
-		Archivo a = (Archivo) elementos.stream()
+		Archivo a = elementos.stream()
+				.map( el -> el.archivoMasNuevo() )
 			    .max( Comparator.comparing(Elemento::getFecha) )
 			    .orElse(null);
 

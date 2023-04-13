@@ -18,7 +18,7 @@ public abstract class Empleado {
 	public abstract double sueldoAdicional();
 	
 	public double descuento() {
-		return ( this.sueldoBasico()*100) /13 + ( this.sueldoAdicional()*100) /5;
+		return  this.sueldoBasico()*.13 +  this.sueldoAdicional()*.05 ;
 	};
 	
 	public double sueldo() {

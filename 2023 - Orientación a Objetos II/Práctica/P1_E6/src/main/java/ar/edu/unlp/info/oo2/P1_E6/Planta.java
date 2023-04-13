@@ -22,7 +22,7 @@ public class Planta extends Empleado{
 		if ( this.getCasado() ) {
 			extra += 5000;
 		}
-		return extra + ( 2000 * this.getCantHijos() ) + ( 2000 * this.antiguedad );
+		return  extra + ( 2000 * this.getCantHijos() ) + ( 2000 * this.antiguedad );
 	}
 
 

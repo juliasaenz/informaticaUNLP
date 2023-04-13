@@ -2,11 +2,11 @@ package ar.edu.unlp.indo.oo2.P1_E4;
 
 import java.util.ArrayList;
 
-public class Compuesto extends Topografia{
+public class Mixta extends Topografia{
 	
 	private ArrayList<Topografia> componentes = new ArrayList<Topografia>();
 
-	public Compuesto() {
+	public Mixta() {
 		
 	}
 	
